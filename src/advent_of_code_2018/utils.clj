@@ -10,3 +10,9 @@
 
 (defn drop-nth [n coll]
   (keep-indexed #(if (not= %1 n) %2) coll))
+
+(defn get-regex-groups [regex word]
+  (->> (re-matcher regex word)
+       (re-find)
+       (drop-nth 0)
+       (vec)))
