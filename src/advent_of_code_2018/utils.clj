@@ -16,3 +16,9 @@
        (re-find)
        (drop-nth 0)
        (vec)))
+
+(defn date [& args]
+  (apply clj-time.core/date-time args))
+
+(defn parse-date [string-date]
+  (clj-time.format/parse string-date))
