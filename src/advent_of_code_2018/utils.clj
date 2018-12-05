@@ -1,5 +1,7 @@
 (ns advent-of-code-2018.utils
-  (:require [clojure.string :as string]))
+  (:require [clojure.string :as string]
+            [clj-time.core]
+            [clj-time.format]))
 
 (defn load-file-from-path [path]
   (slurp path))
